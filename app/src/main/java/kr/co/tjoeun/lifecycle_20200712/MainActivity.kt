@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlin.math.log
 
 class MainActivity : BaseActivity() {
 
@@ -20,6 +21,11 @@ class MainActivity : BaseActivity() {
     override fun onResume() {
         super.onResume()
         Log.d("메인화면", "onResume 실행")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.d("메인화면", "onPause 실행")
     }
     
     override fun setupEvents() {
